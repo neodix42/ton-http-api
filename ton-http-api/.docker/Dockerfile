@@ -5,11 +5,11 @@ RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata
 RUN apt-get install -y git cmake wget python3 python3-pip libsecp256k1-dev libsodium-dev libc6 openssl libssl-dev libmicrohttpd-dev
 
 # python requirements
-ADD ./requirements.txt /tmp/requirements.txt
+ADD ../requirements.txt /tmp/requirements.txt
 RUN python3 -m pip install --no-cache-dir -r /tmp/requirements.txt
 
 # app
-COPY . /app
+COPY .. /app
 WORKDIR /app
 
 # entrypoint
