@@ -36,6 +36,6 @@ jobs:
         with:
           platforms: linux/amd64,linux/arm64
           push: true
-          context: ./ton-http-api/.docker
+          context: ./
           tags: |
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
